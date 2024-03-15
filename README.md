@@ -13,7 +13,7 @@ this is a node.js project install
 `npm i `
 
 ## running tests
-how to run tests?
+How to run tests?
 
 * First, weather API call, need to set/replace with your API_KEY your **own API_KEY** in `libs/constants.ts`
 
@@ -30,13 +30,18 @@ npx playwright test --project chromium --headed
 npx playwright test --project chromium --headed --debug
 ```
 
-## Variance case
+## Variances case
 * The 2 temperature datas used to chek that comparison between UI & API are the Real Temperature & the Feel Temperature of the day.
 * Rule is for each of those 2 temperatures;
 ** (If the difference between the UI Temp and the API temp. (In °F) is > VARIANCE) => throw an error
 ** (If the difference between the UI Temp and the API temp. (In °F) is <= VARIANCE) =>  give a pass
 
 * the VARIANCE value can be modified in `libs/constants.ts` file (default val = 2)
+
+### gists of output example
+
+* not in VARIANCE range: https://gist.github.com/dreuxl/cfb01017a35ec132b099969a4b1ab77e
+* in VARIANCE range: https://gist.github.com/dreuxl/ff257a50f7c51942cf090e03a18111b1
 
 ## specs file description
 
